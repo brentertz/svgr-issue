@@ -7,11 +7,11 @@ const svgCode = `
 </svg>
 `;
 
-// Without svgo plugin, component is generated properly.
 const jsCode1 = await transform(svgCode, {});
 
-// With svgo plugin, no component/templated code is generated. It is a plain SVG string.
-const jsCode2 = await transform(svgCode, { plugins: ["@svgr/plugin-svgo"] });
+const jsCode2 = await transform(svgCode, {
+  plugins: ["@svgr/plugin-svgo", "@svgr/plugin-jsx"],
+});
 
 console.log({ jsCode1, jsCode2 });
 
