@@ -1,0 +1,12 @@
+{
+  "name": "svgr-issue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.mjs"
+  },
+  "dependencies": {
+    "@svgr/core": "^6.5.1",
+    "@svgr/plugin-svgo": "^6.5.1"
+  }
+}
